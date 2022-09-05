@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    background: #1A002F;
+    font-family: 'MedievalSharp', cursive;
+}
+
+
+/*colores neon*/
+
+.n {
+    position: absolute;
+    width: 1290px;
+    height: 100px;
+    left: 0px;
+    top: 36px;
+    background: #94219F;
+    filter: blur(117px);
+}
+
+.n1 {
+    position: absolute;
+    width: 1282px;
+    height: 82px;
+    left: 0px;
+    top: 36px;
+    background: #94219F;
+    filter: blur(17px);
+}
+
+.n2 {
+    position: absolute;
+    width: 114px;
+    height: 44px;
+    left: 100px;
+    top: 30px;
+    background: #00A3FF;
+    filter: blur(70px);
+}
+
+.n3 {
+    position: absolute;
+    width: 114px;
+    height: 44px;
+    left: 300px;
+    top: 30px;
+    background: #00A3FF;
+    filter: blur(70px);
+}
+
+.n4 {
+    position: absolute;
+    width: 114px;
+    height: 44px;
+    left: 480px;
+    top: 30px;
+    background: #00A3FF;
+    filter: blur(70px);
+}
+
+.n5 {
+    position: absolute;
+    width: 114px;
+    height: 44px;
+    left: 690px;
+    top: 30px;
+    background: #00A3FF;
+    filter: blur(70px);
+}
+
+.n6 {
+    position: absolute;
+    width: 350px;
+    height: 44px;
+    left: 900px;
+    top: 30px;
+    background: #00A3FF;
+    filter: blur(70px);
+}
+
+.i {
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    filter: drop-shadow(0px 7px 6px rgba(255, 174, 16, 0.25));
+}
+
+
+/*barra de objetos */
+
+.menu {
+    position: absolute;
+    width: 1280px;
+    height: 69px;
+    left: 0px;
+    top: 36px;
+    background: #94219f;
+}
+
+.menu>a {
+    text-decoration: none;
+    padding: 10px 31px;
+    font-family: 'MedievalSharp', cursive;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 59px;
+    color: #00A3FF;
+    text-shadow: 0px 8px 4px rgba(0, 163, 255, 0.25);
+}
+
+
+/*novedades*/
+
+.nov {
+    position: absolute;
+    width: 114px;
+    height: 44px;
+    left: 280px;
+    top: 160px;
+    font-family: 'MedievalSharp', cursive;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 2px;
+    color: #00A3FF;
+    text-shadow: 0px 8px 4px rgba(0, 163, 255, 0.25);
+}
+
+.nov2 {
+    position: absolute;
+    width: 700px;
+    height: 70px;
+    left: 280px;
+    top: 160px;
+    background: #00A3FF;
+    filter: blur(95px);
+}
+
+
+/*objetos de inreraccion*/
+
+.blocks1 {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 45px;
+    top: 339px;
+    background: #1A002F;
+    box-shadow: 0px 8px 87px #1ABAFF;
+    border-radius: 20px;
+}
+
+.blocks2 {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 480px;
+    top: 339px;
+    background: #1A002F;
+    box-shadow: 0px 8px 87px #1ABAFF;
+    border-radius: 20px;
+}
+
+.blocks3 {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 880px;
+    top: 339px;
+    background: #1A002F;
+    box-shadow: 0px 8px 87px #1ABAFF;
+    border-radius: 20px;
+}
+
+
+/*juegos*/
+
+.stonelive {
+    position: absolute;
+    width: 1023px;
+    height: 74px;
+    left: 127px;
+    top: 245px;
+    background: rgba(74, 36, 103, 0.44);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+}
+
+.pal {
+    position: absolute;
+    width: 234px;
+    height: 57px;
+    left: 15px;
+    top: 0px;
+    font-family: 'MedievalSharp', cursive;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 63px;
+    line-height: 74px;
+    color: #00D1FF;
+    text-shadow: 0px 4px 32px #00D1FF;
+}
+
+.tex_tone {
+    position: absolute;
+    width: 430px;
+    height: 37px;
+    left: 580px;
+    top: 260px;
+    font-family: 'MedievalSharp', cursive;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 21px;
+    color: #CB00FE;
+    text-shadow: 0px 3px 8px #CB00FE;
+}
