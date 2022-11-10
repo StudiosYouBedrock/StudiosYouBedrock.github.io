@@ -165,7 +165,7 @@ input {
     position: absolute;
     top: 17%;
     left: 52%;
-    width: 50%;
+    width: 35%;
     height: 50%;
     background-color: rgba(0, 0, 0, 0.346);
     color: aliceblue;
@@ -186,6 +186,7 @@ input {
     border: 2px;
     text-rendering: auto;
     border-radius: 3%;
+    display: none;
 }
 
 .expot {
@@ -279,62 +280,131 @@ input {
     transform: skewX(-45deg) scale(1, 1);
 }
 
-@media (max-width:600px) {
-    .TitleM {
-        left: 50px;
-        top: 40px;
-        scale: 1.2;
-    }
-    .res {
-        top: 180px;
-        left: 20px;
-        scale: 0.8;
-    }
+@media (min-height:600px) {
     .lineR {
-        width: 420px;
-        top: 230px;
-    }
-    .npk {
-        top: 240px;
-        left: 20px;
-    }
-    .dc {
-        top: 280px;
-    }
-    .minv {
-        top: 320px;
+        position: absolute;
+        width: 700px;
+        height: 0px;
+        left: 0px;
+        top: 160px;
+        border: 1px solid #ffffff;
+        transform: rotate(0.01deg);
     }
     .typem {
-        width: 170px;
-        left: 200px;
-        top: 240px;
+        cursor: pointer;
+        color: #ffffff;
+        position: absolute;
+        display: flex;
+        margin: 1px;
+        padding-left: 0%;
+        top: 180px;
+        left: 220px;
+        background-color: #000000;
+        border-radius: 30px;
+        border-color: #ffffff00;
+        font-family: 'normal-minecraft';
     }
-    .expot {
-        width: 40%;
-        left: 10%;
-        top: 710px;
+    .npk {
+        position: absolute;
+        display: flex;
+        margin: 1px;
+        padding-left: 0%;
+        top: 180px;
+        left: 20px;
+        font-family: 'normal-minecraft';
     }
-    .a {
-        width: 40%;
-        left: 1%;
-        top: 710px;
+    .dc {
+        position: absolute;
+        display: flex;
+        margin: 1px;
+        padding-left: 0%;
+        top: 220px;
+        left: 20px;
+        font-family: 'normal-minecraft';
     }
+    .minv {
+        cursor: pointer;
+        color: #ffffff;
+        position: absolute;
+        display: flex;
+        margin: 1px;
+        padding-left: 0%;
+        top: 280px;
+        left: 20px;
+        background-color: #000000;
+        border-radius: 30px;
+        border-color: #ffffff00;
+        font-family: 'normal-minecraft';
+    }
+    .res {
+        position: absolute;
+        top: 80px;
+        left: 80px;
+    }
+    /*--------------------------------------------------------------------------------*/
     .tx {
-        width: 89%;
-        height: 60%;
-        top: 62%;
-        left: 5%;
+        position: absolute;
+        top: 17%;
+        left: 52%;
+        width: 35%;
+        height: 50%;
+        background-color: rgba(0, 0, 0, 0.346);
+        color: aliceblue;
+        border: 2px;
+        text-rendering: auto;
+        border-radius: 3%;
+        font-family: 'normal-minecraft';
     }
     .tx2 {
+        position: absolute;
+        top: 600px;
+        left: 520px;
+        width: 50%;
+        height: 50%;
+        background-color: rgba(0, 0, 0, 0.346);
+        color: aliceblue;
+        border: 2px;
+        text-rendering: auto;
+        border-radius: 3%;
         display: none;
     }
-}
-
-@media(min-width:600px) {
     .expot {
+        flex-wrap: wrap;
+        top: 310px;
+        left: 14%;
         width: 11%;
+        height: 10%;
+        border-top: #63ff55, 10px;
+        background: #24a700;
+        border-color: #17cd07;
+        border-width: 5px;
+        color: #ffffff;
+        transition: transform .2s;
+        padding: 16px 20px;
+        border-radius: -2px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: inline-block;
+        font-family: 'normal-minecraft';
     }
     .a {
         width: 10%;
+        height: 9%;
+        top: 310px;
+        left: 12%;
+        border-top: #63ff55, 10px;
+        background: #24a700;
+        border-color: #17cd07;
+        border-width: 5px;
+        color: #ffffff;
+        transition: transform .2s;
+        padding: 16px 20px;
+        border-radius: -2px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: inline-block;
+        font-family: 'normal-minecraft';
     }
 }
