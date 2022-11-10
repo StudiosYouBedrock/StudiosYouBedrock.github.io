@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <link rel="stylesheet" href="stiles.css">
-    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
     <style>
         textarea {
             resize: none;
@@ -19,21 +18,22 @@
 </head>
 
 <body>
-    <h1 class="TitleM">Manifest Generator</h1>
-    <button class="a" onclick="setTimeout(dat,10)">Generar</button>
-    <button class="expot" id="exportar" onclick="setTimeout(dat,10)">Exportar</button>
-    <div>
-        <h1 class="res">Resource Pack Data</h1>
-        <a class="lineR"></a>
-        <textarea class="tx" id="Texto" readonly rows="5">"empaty"</textarea>
-    </div>
-    <div>
-        <textarea class="tx2" id="Texto2" readonly rows="5">"empaty"</textarea>
-    </div>
-    <div>
-        <input type="text" id="namePck" class="npk" placeholder="NamePack">
-        <input type="text" id="despriptionPck" class="dc" placeholder="Description">
-        <select class="minv" id="minv">
+    <div class="contentWeb">
+        <h1 class="TitleM">Manifest Generator</h1>
+        <button class="a" onclick="setTimeout(dat,10)">Generar</button>
+        <button class="expot" id="exportar" onclick="setTimeout(dat,10)">Exportar</button>
+        <div>
+            <h1 class="res">Resource Pack Data</h1>
+            <a class="lineR"></a>
+            <textarea class="tx" id="Texto" readonly rows="5">"empaty"</textarea>
+        </div>
+        <div>
+            <textarea class="tx2" id="Texto2" readonly rows="5">"empaty"</textarea>
+        </div>
+        <div>
+            <input type="text" id="namePck" class="npk" placeholder="NamePack">
+            <input type="text" id="despriptionPck" class="dc" placeholder="Description">
+            <select class="minv" id="minv">
         <option value="1,13,0">1.13.0</option>
         <option value="1,14,0">1.14.0</option>
         <option value="1,15,0">1.15.0</option>
@@ -42,12 +42,14 @@
         <option value="1,18,0">1.18.0</option>
         <option value="1,19,0">1.19.0</option>
     </select>
-        <select class="typem" id="typePck">
+            <select class="typem" id="typePck">
         <option selected value="resources">Resource</option>
         <option value="data">Behavior</option>
         <option value="bRdPn">Resource & Behavior (Dependet)</option>
     </select>
+        </div>
     </div>
+
 
     <script src="./index.js"></script>
 </body>

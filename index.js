@@ -29,7 +29,7 @@
             "uuid": "` + (uuidv4()) + `",
             "version": [1,0,0],
             "min_engine_version": [` + (minv.value) + `]` + `
-            ` +
+                 ` +
              `},
             "modules": [{
             "description": "` + (despriptionPck.value) + `",
@@ -66,14 +66,14 @@
 
  function valideKey(evt) {
 
-     // code is the decimal ASCII representation of the pressed key.
+
      var code = (evt.which) ? evt.which : evt.keyCode;
 
-     if (code == 8) { // backspace.
+     if (code == 8) {
          return true;
-     } else if (code >= 48 && code <= 57) { // is a number.
+     } else if (code >= 48 && code <= 57) {
          return true;
-     } else { // other keys.
+     } else {
          return false;
      }
  }

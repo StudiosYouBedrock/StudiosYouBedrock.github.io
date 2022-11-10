@@ -1,8 +1,19 @@
-@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+@font-face {
+    font-family: minecraft;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Minecraft'), url(./font/MinecraftTen-VGORe.woff) format('woff')
+}
+
+@font-face {
+    font-family: normal-minecraft;
+    src: url(./font/Mojangles.ttf);
+}
+
 * {
     background-color: #181921;
     caret-color: rgb(251, 0, 255);
-    caption-side: bottom;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -12,8 +23,8 @@ h1 {
 
 .TitleM {
     position: absolute;
-    top: 10px;
-    left: 520px;
+    top: 1%;
+    left: 52%;
     scale: 1.7;
 }
 
@@ -99,6 +110,7 @@ input {
     background-color: #000000;
     border-radius: 30px;
     border-color: #ffffff00;
+    font-family: 'normal-minecraft';
 }
 
 .npk {
@@ -108,6 +120,7 @@ input {
     padding-left: 0%;
     top: 180px;
     left: 20px;
+    font-family: 'normal-minecraft';
 }
 
 .dc {
@@ -117,6 +130,7 @@ input {
     padding-left: 0%;
     top: 220px;
     left: 20px;
+    font-family: 'normal-minecraft';
 }
 
 .minv {
@@ -131,6 +145,7 @@ input {
     background-color: #000000;
     border-radius: 30px;
     border-color: #ffffff00;
+    font-family: 'normal-minecraft';
 }
 
 .res {
@@ -144,8 +159,8 @@ input {
 
 .tx {
     position: absolute;
-    top: 170px;
-    left: 520px;
+    top: 17%;
+    left: 52%;
     width: 50%;
     height: 50%;
     background-color: rgba(0, 0, 0, 0.346);
@@ -153,6 +168,7 @@ input {
     border: 2px;
     text-rendering: auto;
     border-radius: 3%;
+    font-family: 'normal-minecraft';
 }
 
 .tx2 {
@@ -169,8 +185,9 @@ input {
 }
 
 .expot {
-    top: 410px;
-    left: 340px;
+    flex-wrap: wrap;
+    top: 31%;
+    left: 14%;
     width: 11%;
     height: 10%;
     border-top: #63ff55, 10px;
@@ -185,6 +202,7 @@ input {
     z-index: 1;
     overflow: hidden;
     display: inline-block;
+    font-family: 'normal-minecraft';
 }
 
 .expot:hover {
@@ -215,8 +233,8 @@ input {
 .a {
     width: 10%;
     height: 9%;
-    top: 410px;
-    left: 320px;
+    top: 31%;
+    left: 12%;
     border-top: #63ff55, 10px;
     background: #24a700;
     border-color: #17cd07;
@@ -229,6 +247,7 @@ input {
     z-index: 1;
     overflow: hidden;
     display: inline-block;
+    font-family: 'normal-minecraft';
 }
 
 .a:hover {
@@ -254,4 +273,33 @@ input {
 .a:hover::after {
     transition: all 0.3s ease-out;
     transform: skewX(-45deg) scale(1, 1);
+}
+
+@media (max-width:600px) {
+    .expot {
+        width: 40%;
+        left: 10%;
+    }
+    .a {
+        width: 40%;
+        left: 1%;
+    }
+    .tx {
+        width: 80%;
+        height: 60%;
+        top: 62%;
+        left: 10%;
+    }
+    .tx2 {
+        display: none;
+    }
+}
+
+@media(min-width:600px) {
+    .expot {
+        width: 11%;
+    }
+    .a {
+        width: 10%;
+    }
 }
