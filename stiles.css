@@ -28,6 +28,10 @@ h1 {
     scale: 1.7;
 }
 
+textarea {
+    overflow: auto;
+}
+
 input {
     background-color: #000000;
     border-radius: 30px;
@@ -186,7 +190,7 @@ input {
 
 .expot {
     flex-wrap: wrap;
-    top: 31%;
+    top: 310px;
     left: 14%;
     width: 11%;
     height: 10%;
@@ -233,7 +237,7 @@ input {
 .a {
     width: 10%;
     height: 9%;
-    top: 31%;
+    top: 310px;
     left: 12%;
     border-top: #63ff55, 10px;
     background: #24a700;
@@ -276,19 +280,50 @@ input {
 }
 
 @media (max-width:600px) {
+    .TitleM {
+        left: 50px;
+        top: 40px;
+        scale: 1.2;
+    }
+    .res {
+        top: 180px;
+        left: 20px;
+        scale: 0.8;
+    }
+    .lineR {
+        width: 420px;
+        top: 230px;
+    }
+    .npk {
+        top: 240px;
+        left: 20px;
+    }
+    .dc {
+        top: 280px;
+    }
+    .minv {
+        top: 320px;
+    }
+    .typem {
+        width: 170px;
+        left: 200px;
+        top: 240px;
+    }
     .expot {
         width: 40%;
         left: 10%;
+        top: 710px;
     }
     .a {
         width: 40%;
         left: 1%;
+        top: 710px;
     }
     .tx {
-        width: 80%;
-        height: 60%;
+        width: 89%;
+        height: 8%;
         top: 62%;
-        left: 10%;
+        left: 5%;
     }
     .tx2 {
         display: none;
