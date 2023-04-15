@@ -1,0 +1,106 @@
+body {
+  font-family: Mojangles;
+  background-color: #0d1017;
+  color: white;
+}
+
+p,
+a {
+  user-select: none;
+}
+code {
+  font-family: Mojangles;
+}
+#home {
+  animation: mymove 1s;
+}
+
+#manifest_generator {
+  animation: mymove 1s;
+}
+
+#block_generator {
+  animation: mymove 2s;
+}
+
+/* ------------------------- */
+/* manifest_generator */
+/* ------------------------- */
+#autor_content {
+  display: none;
+}
+
+#autor_checkbox:checked ~ #autor_content {
+  display: block;
+}
+
+#result_manifest {
+  display: block;
+}
+
+#result_manifest_checkbox:checked ~ #result_manifest {
+  display: none;
+}
+/* ------------------------- */
+
+/* ------------------------- */
+/* block_generator */
+/* ------------------------- */
+
+/* creative */
+
+#creative_content {
+  display: none;
+}
+
+#creative_checkbox:checked ~ #creative_content {
+  display: block;
+}
+
+/* geometry */
+
+#geometry_content {
+  display: none;
+}
+
+#geometry_checkbox:checked ~ #geometry_content {
+  display: block;
+}
+/* crafting_table */
+
+#crafting_table_content {
+  display: none;
+}
+
+#crafting_table_checkbox:checked ~ #crafting_table_content {
+  display: block;
+}
+/* entity_collision */
+
+#entity_collision_content {
+  display: none;
+}
+
+#entity_collision_checkbox:checked ~ #entity_collision_content {
+  display: block;
+}
+
+#entity_collision_none_checkbox:checked ~ #entity_collision_none_content {
+  display: none;
+}
+
+/* pick_collision */
+
+#pick_collision_content {
+  display: none;
+}
+
+#pick_collision_checkbox:checked ~ #pick_collision_content {
+  display: block;
+}
+
+#pick_collision_none_checkbox:checked ~ #pick_collision_none_content {
+  display: none;
+}
+
+/* ------------------------- */

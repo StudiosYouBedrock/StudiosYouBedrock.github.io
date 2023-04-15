@@ -1,53 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/icons/syb_icon_anim.gif" type="image/x-icon" />
-    <link rel="stylesheet" href="default.css" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <title>YouCreators</title>
+    <!--------------------------------------------->
+    <!-- css -->
+    <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/font.css" />
+    <link rel="stylesheet" href="src/css//obj-default/buttons.css" />
+    <link rel="stylesheet" href="src/css//obj-default/titles.css" />
+    <link rel="stylesheet" href="src/css/obj-default/inputs.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/block-content.css" />
+    <link rel="stylesheet" href="src/css/obj-default/toggles.css" />
+    <!--------------------------------------------->
+  </head>
 
-    <link rel="stylesheet" href="header.css" />
-    <title>StudiosYouBedrock</title>
-</head>
-
-<body>
-    <header class="header">
-        <input type="checkbox" id="menu-bt" />
-        <label for="menu-bt"></label>
-        <div>
-            <h1>Menu</h1>
-            <label>
-          <p>Home</p>
-          <p>Addons</p>
-          <p>Textures</p>
-          <p>Acerca de</p>
-        </label>
-        </div>
-        <img class="syb-icon" src="assets/icons/syb_icon_anim.gif" />
-        <img class="sbt-text" src="assets/icons/Syb_text.png" />
-    </header>
-    <div class="items_addons">
-        <div class="msj" title="YouBiome un addon muy extenso que agreaga nuevos biomas mas bloques ,armaduras etc.">
-            <h1>En produccion</h1>
-            <img src="assets/icons/title_YB.png" alt="" />
-
-            <h2>YouBiome(v1)</h2>
-            <p>
-                YouBiome un addon muy extenso que agreaga nuevos biomas mas bloques ,armaduras etc.
-            </p>
-        </div>
-        <div title="YouSeed un addon con mas vegetacion a minecraft y abientaccion.">
-            <h1>En produccion</h1>
-            <img src="assets/icons/title_YS.png" alt="" />
-            <h2>YouSeed(v1)</h2>
-            <p>YouSeed un addon con mas vegetacion a minecraft y abientaccion.</p>
-        </div>
+  <body>
+    <!--------------------------------------------->
+    <!-- header -->
+    <div id="header">
+      <input type="checkbox" id="menu-checkbox" />
+      <label for="menu-checkbox" class="menu-bt_top"></label>
+      <label for="menu-checkbox" class="menu-bt" id="menu-bt"> </label>
+      <div id="menu">
+        <p>YouCreators</p>
+        <label onclick="menu_none();window.location.href = `/`">Inicio</label>
+        <label
+          onclick="menu_none();window.location.href = `/manifest-generator`"
+          >Manifest Generator</label
+        >
+        <label onclick="menu_none();window.location.href = `/block-generator`"
+          >Block Generator</label
+        >
+      </div>
     </div>
-    <div class="footer">
-        <p>Todos los derechos reservados a StudiosYouBedrock</p>
-    </div>
-    <div class="splash_YC"></div>
-</body>
 
+    <!--------------------------------------------->
+
+    <div id="home" class="content_big center-x3" style="top: 50px">
+      <div class="block-content type-orange">
+        <h1>
+          <img src="src/assets/icons/documents_icon.png" alt="manifest.json" />
+          Documentacion
+        </h1>
+        <p>Aprende a crear tu propio addon en esta documentacion</p>
+        <button disabled="disabled">leer</button>
+      </div>
+      <div class="block-content type-purple">
+        <h1>
+          <img src="src/assets/icons/manifest_icon.svg" alt="manifest.json" />
+          Manifest generator
+        </h1>
+        <p>Genera tu manifest rapidamente sin problemas</p>
+        <button onclick="window.location.href = `manifest-generator` ">
+          Usar
+        </button>
+      </div>
+      <div class="block-content type-purple">
+        <h1>
+          <img src="src/assets/icons/block_icon.svg" alt="manifest.json" />
+          Block generator
+        </h1>
+        <p>Genera tu manifest rapidamente sin problemas</p>
+        <button onclick="window.location.href = `block-generator`">Usar</button>
+      </div>
+    </div>
+
+    <!--------------------------------------------->
+    <!-- js -->
+
+    <script
+      src="src/lib/jszip.min.js"
+      type="text/javascript"
+      charset="utf-8"></script>
+    <script
+      src="src/lib/FileSaver.js"
+      type="text/javascript"
+      charset="utf-8"></script>
+    <script
+      src="src/lib/uuid.js"
+      type="text/javascript"
+      charset="utf-8"></script>
+
+    <script src="src/js/manifest/manifest.js"></script>
+    <script src="src/js/block/block.js"></script>
+    <script src="src/js/index.js"></script>
+    <!--------------------------------------------->
+  </body>
 </html>

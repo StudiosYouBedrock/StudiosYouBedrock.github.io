@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
+    <title>YouCreators</title>
+    <!--------------------------------------------->
+    <!-- css -->
+    <link rel="stylesheet" href="/src/css/index.css" />
+    <link rel="stylesheet" href="/src/font.css" />
+    <link rel="stylesheet" href="/src/css//obj-default/buttons.css" />
+    <link rel="stylesheet" href="/src/css//obj-default/titles.css" />
+    <link rel="stylesheet" href="/src/css/obj-default/inputs.css" />
+    <link rel="stylesheet" href="/src/css/header.css" />
+    <link rel="stylesheet" href="/src/css/block-content.css" />
+    <link rel="stylesheet" href="/src/css/obj-default/toggles.css" />
+
+    <!--------------------------------------------->
+  </head>
+
+  <body>
+    <div id="header">
+      <input type="checkbox" id="menu-checkbox" />
+
+      <label
+        for="menu-checkbox"
+        class="menu-bt_top"
+        onclick="anim_menu_exit()"></label>
+      <label
+        for="menu-checkbox"
+        class="menu-bt"
+        id="menu-bt"
+        onclick="anim_menu_exit()">
+      </label>
+      <div id="menu">
+        <h1>Menu</h1>
+        <label onclick="menu_none();window.location.href = ``">Inicio</label>
+        <label
+          onclick="menu_none();window.location.href = `/manifest-generator`"
+          >Manifest Generator</label
+        >
+        <label onclick="menu_none();window.location.href = ``"
+          >Block Generator</label
+        >
+      </div>
+    </div>
+    <div id="block_generator">
+      <div class="content_top center_top">
+        <div class="block-content">
+          <button onclick="menu_none();window.location.href = `/index.html`">
+            Volver al inicio
+          </button>
+        </div>
+
+        <div class="block-content type-orange">
+          <h3>Block Generator</h3>
+          <p>!!Bedrock Edition!!</p>
+        </div>
+      </div>
+      <div class="content_big content_big_center">
+        <div class="block-content type-purple">
+          <!-- identifier Block -->
+          <div>
+            <h4>identifier Block</h4>
+            <input
+              type="text"
+              placeholder="identifier"
+              id="identifier"
+              oninput="generate()" />
+            :
+            <input
+              type="text"
+              placeholder="name"
+              id="name_block"
+              oninput="generate()" />
+          </div>
+          <p>_______________________________</p>
+          <!-- register creative -->
+          <div>
+            <h4>Menu register creative</h4>
+            <input
+              type="checkbox"
+              id="creative_checkbox"
+              onchange="generate()" />
+            <label
+              for="creative_checkbox"
+              class="toggle"
+              id="creative_toggle"
+              onclick="generate()"></label>
+            <div id="creative_content" class="microsub_content">
+              <p>Category</p>
+              <select id="category" class="input-big" onchange="groups(); generate()">
+                <option value="nature">Nature</option>
+                <option value="construction">Construction</option>
+                <option value="equipment">Equipment</option>
+                <option value="items">Items</option>
+                <option value="none">None</option>
+              </select>
+              <p>Grupo</p>
+
+                <select id="nature" class="input-big select_block" onchange=" generate()">
+                  <option value="itemGroup.name.dye">dye</option>
+                  <option value="itemGroup.name.ore">ore</option>
+                  <option value="itemGroup.name.stone">stone</option>
+                  <option value="itemGroup.name.wood">wood</option>
+                  <option value="itemGroup.name.sapling">sapling</option>
+                  <option value="itemGroup.name.leaves">leaves</option>
+                  <option value="itemGroup.name.seed">seed</option>
+                  <option value="itemGroup.name.crop">crop</option>
+                  <option value="itemGroup.name.flower">flower</option>
+                  <option value="itemGroup.name.rawFood">rawFood</option>
+                  <option value="itemGroup.name.mushroom">mushroom</option>
+                  <option value="itemGroup.name.mobEgg">mobEgg</option>
+                  <option value="itemGroup.name.coral">coral</option>
+                  <option value="itemGroup.name.coral_decorations">
+                    coral_decorations
+                  </option>
+                  <option value="itemGroup.name.sculk">sculk</option>
+                  <option value="itemGroup.name.netherWartBlock">
+                    netherWartBlock
+                  </option>                
+                  <option
+                   value="itemGroup.name.monsterStoneEgg">
+                    monsterStoneEgg
+                  </option>
+                  <option value="itemGroup.name.grass">grass</option>
+                </option>
+                </select>  
+              <select id="construction"class="input-big select_block"onchange=" generate()">
+                <option value="itemGroup.name.planks">planks</option>
+                <option value="itemGroup.name.walls">walls</option>
+                <option value="itemGroup.name.fence">fence</option>
+                <option value="itemGroup.name.fenceGate">fenceGate</option>
+                <option value="itemGroup.name.stairs">stairs</option>
+                <option value="itemGroup.name.door">door</option>
+                <option value="itemGroup.name.glass">glass</option>
+                <option value="itemGroup.name.glassPane">glassPane</option>
+                <option value="itemGroup.name.slab">slab</option>
+                <option value="itemGroup.name.sandstone">sandstone</option>
+                <option value="itemGroup.name.wool">wool</option>
+                <option value="itemGroup.name.woolCarpet">woolCarpet</option>
+                <option value="itemGroup.name.concrete">concrete</option>
+                <option value="itemGroup.name.concretePowder">
+                  concretePowder
+                </option>
+                <option value="itemGroup.name.terracotta">terracotta</option>
+                <option value="itemGroup.name.glazedTerracotta">
+                  glazedTerracotta
+                <option value="itemGroup.name.stoneBrick">stoneBrick</option>
+              </option>
+              </select>
+              <select id="equipment"class="input-big select_block"onchange=" generate()">
+                <option value="itemGroup.name.helmet">helmet</option>
+                <option value="itemGroup.name.chestplate">chestplate</option>
+                <option value="itemGroup.name.leggings">leggings</option>
+                <option value="itemGroup.name.boots">boots</option>
+                <option value="itemGroup.name.sword">sword</option>
+                <option value="itemGroup.name.axe">axe</option>
+                <option value="itemGroup.name.pickaxe">pickaxe</option>
+                <option value="itemGroup.name.shovel">shovel</option>
+                <option value="itemGroup.name.hoe">hoe</option>
+                <option value="itemGroup.name.arrow">arrow</option>
+                <option value="itemGroup.name.cookedFood">cookedFood</option>
+                <option value="itemGroup.name.goatHorn">goatHorn</option>
+                <option value="itemGroup.name.horseArmor">horseArmor</option>
+                <option value="itemGroup.name.potion">potion</option>
+                <option value="itemGroup.name.splashPotion">
+                  splashPotion
+                </option>
+                <option value="itemGroup.name.lingeringPotion">
+                  lingeringPotion
+                </option>
+
+
+              </select>
+              <select id="items" class="input-big select_block"onchange=" generate()">
+                <option value="itemGroup.name.anvil">anvil</option>
+                <option value="itemGroup.name.banner">bannert</option>
+                <option value="itemGroup.name.banner_pattern">
+                  banner_pattern
+                </option>
+                <option value="itemGroup.name.bed">bed</option>
+                <option value="itemGroup.name.boat">boat</option>
+                <option value="itemGroup.name.buttons">buttons</option>
+                <option value="itemGroup.name.candles">candles</option>
+                <option value="temGroup.name.chalkboard">chalkboarde</option>
+                <option value="itemGroup.name.chest">chest</option>
+                <option value="itemGroup.name.chestboat">chestboat</option>
+                <option value="itemGroup.name.copper">coppere</option>
+                <option value="itemGroup.name.enchantedBook">
+                  enchantedBook
+                </option>
+                <option value="itemGroup.name.firework">firework</option>
+                <option value="itemGroup.name.fireworkStars">
+                  fireworkStars
+                </option>
+                <option value="itemGroup.name.minecart">minecart</option>
+                <option value="itemGroup.name.miscFood">miscFood</option>
+                <option value="itemGroup.name.permission">permission</option>
+                <option value="itemGroup.name.rail">rail</option>
+                <option value="itemGroup.name.record">record</option>
+                <option value="itemGroup.name.shulkerBox">shulkerBox</option>
+                <option value="itemGroup.name.sign">sign</option>
+                <option value="itemGroup.name.skull">skull</option>
+                <option value="itemGroup.name.stainedClay">stainedClay</option>
+                <option value="itemGroup.name.trapdoor">trapdoor</option>
+              </select>
+              <select id="none" disabled="disabled" class="input-big select_block"onchange=" generate()">
+                <option value="none">None</option>
+              </select>
+            </div>
+          </div>
+          <p>!!Esta funcion se esta trabajando puede generar errores!!</p>
+
+          <p>_______________________________</p>
+          <!-- loot -->
+          <div>
+            <h4>Loot</h4>
+            <input
+              type="text"
+              class="input-big"
+              placeholder="loot_tables/blocks/myblock"
+              id="loot"
+              oninput="generate()" />
+          </div>
+          <p>_______________________________</p>
+          <!-- time_destroy -->
+          <div>
+            <h4>Time destroy</h4>
+            <input
+              type="text"
+              class="input-big"
+              placeholder="1.0"
+              value="1.0"
+              id="time_destroy"
+              oninput="generate()" />
+          </div>
+          <p>_______________________________</p>
+          <!-- resistencie_explosive -->
+          <div>
+            <h4>Resistencie Explosive</h4>
+            <input
+              type="number"
+              min="0"
+              max="1200"
+              value="0"
+              class="input-big"
+              placeholder="4"
+              id="resistencie_explosive"
+              oninput="generate()" />
+          </div>
+          <p>_______________________________</p>
+          <!-- map_color -->
+          <div>
+            <h4>Map color</h4>
+            <input
+              value="#000000"
+              type="color"
+              class="input-big"
+              placeholder="#fff"
+              id="map_color"
+              oninput="generate()" />
+          </div>    
+          <p>_______________________________</p>
+          <!-- light_emisson -->
+          <div>
+            <h4>Block light absorption</h4>
+            <input
+              type="text"
+              value="0"
+              class="input-big"
+              placeholder="0"
+              id="block_light_absorption"
+              oninput="generate()" />
+          </div>          
+          <p>_______________________________</p>
+          <!-- block_light_absorption -->
+          <div>
+            <h4>Light Emisson</h4>
+            <input
+              type="text"
+              value="1.0"
+              class="input-big"
+              placeholder="1.0"
+              id="light_emisson"
+              oninput="generate()" />
+          </div>
+          <p>_______________________________</p>
+          <!-- frition -->
+          <div>
+            <h4>Friction</h4>
+            <input
+              type="text"
+              value="0.6"
+              class="input-big"
+              placeholder="0.6"
+              id="friction"
+              oninput="generate()" />
+          </div>
+          <p>_______________________________</p>
+          <!-- geometry -->
+          <div>
+            <h4>Geometry</h4>
+            <input type="checkbox" id="geometry_checkbox" onchange="generate()" />
+            <label
+              for="geometry_checkbox"
+              class="toggle"
+              id="geometry_toggle"
+              onclick="generate()"></label>
+            <div id="geometry_content">
+              <input
+                type="text"
+                class="input-big"
+                placeholder="geometry.name" 
+                id="geometry_name" oninput="generate()"/>
+            </div>
+          </div>
+          <p>_______________________________</p>
+          <!-- crafting_table -->
+          <div>
+            <h4>Crafting Table</h4>
+            <input type="checkbox" id="crafting_table_checkbox" onchange="generate()" />
+            <label
+              for="crafting_table_checkbox"
+              class="toggle"
+              id="crafting_table_toggle"
+              onclick="generate()"></label>
+            <div id="crafting_table_content" class="microsub_content">
+              <h4>description</h4>
+              <input
+                type="text"
+                class="input-big"
+                placeholder="Table description" 
+                id="description" oninput="generate()"/>
+            
+            <h4>crafting tags</h4>         
+              <input
+                type="text"
+                class="input-big"
+                placeholder="crafting_table, custom_crafting_tag" 
+                id="crafting_tag" oninput="generate()"/>
+            <p>ej:
+              "crafting_table","custom_crafting_tag"</p>
+              </div>
+          </div>
+          <p>_______________________________</p>
+
+          <!-- entity_collision -->
+          <div>
+            <h4>Entity Collision</h4>
+
+            <input type="checkbox" id="entity_collision_checkbox" onchange="generate()" />
+            <label
+              for="entity_collision_checkbox"
+              class="toggle"
+              id="entity_collision_toggle"
+              onclick="generate()"></label>
+
+            <div id="entity_collision_content" class="sub_content">
+              <h4>No collision</h4>
+              <input
+                type="checkbox"
+                id="entity_collision_none_checkbox"
+                onchange="generate()" />
+              <label
+                for="entity_collision_none_checkbox"
+                class="toggle"
+                id="entity_collision_none_toggle"
+                onclick="generate()"></label>
+
+              <div id="entity_collision_none_content" class="microsub_content">
+                <h4>Origin</h4>
+                <input type="text" class="input-big" placeholder="-8, 0, -8" id="entity_collision_or" oninput="generate()"/>
+                <h4>Size</h4>
+                <input type="text" class="input-big" placeholder="16, 16, 16" id="entity_collision_si"oninput="generate()" />
+              </div>
+            </div>
+          </div>
+          <!-- pick_collision -->
+          <p>_______________________________</p>
+          <div>
+            <h4>Pick Collision</h4>
+            <input type="checkbox" id="pick_collision_checkbox" onchange="generate()" />
+            <label
+              for="pick_collision_checkbox"
+              class="toggle"
+              id="pick_collision_toggle"
+              onclick="generate()"></label>
+
+            <div id="pick_collision_content" class="sub_content">
+              <h4>No collision</h4>
+              <input
+                type="checkbox"
+                id="pick_collision_none_checkbox"
+                onchange="generate()" />
+              <label
+                for="pick_collision_none_checkbox"
+                class="toggle"
+                id="pick_collision_none_toggle"
+                onclick="generate()"></label>
+
+              <div id="pick_collision_none_content" class="microsub_content">
+                <h4>Origin</h4>
+                <input type="text" class="input-big" placeholder="-8, 0, -8" id="pick_collision_or" oninput="generate()"/>
+                <h4>Size</h4>
+                <input type="text" class="input-big" placeholder="16, 16, 16"id="pick_collision_si" oninput="generate()"/>
+              </div>
+            </div>
+          </div>
+          <p>_______________________________</p>
+          <!-- inmovable -->
+          <div>
+            <h4>Inmovable</h4>
+            <input type="checkbox" id="inmovable_checkbox" onchange="generate()" />
+            <label
+              for="inmovable_checkbox"
+              class="toggle"
+              id="inmovable_toggle"
+              onclick="generate()"></label>
+          </div>
+          <p>_______________________________</p>
+          <!-- breakonpush -->
+          <div>
+            <h4>Breakonpush</h4>
+            <input type="checkbox" id="breakonpush_checkbox" onchange="generate()" />
+            <label
+              for="breakonpush_checkbox"
+              class="toggle"
+              id="breakonpush_toggle"
+              onclick="generate()"></label>
+          </div>
+          <p>_______________________________</p>
+          <!-- onlypistonpush -->
+          <div>
+            <h4>Onlypistonpush</h4>
+            <input type="checkbox" id="onlypistonpush_checkbox" onchange="generate()" />
+            <label
+              for="onlypistonpush_checkbox"
+              class="toggle"
+              id="onlypistonpush_toggle"
+              onclick="generate()"></label>
+          </div>
+        </div>
+        <div class="block-content type-purple">
+          <h4>Results</h4>
+          <div id="result_block">
+            <p>________________</p>
+            <div id="bh-b-r">
+              <h4>Behavior</h4>
+              <textarea cols="35" rows="20" readonly id="result_block_bh">
+              </textarea>
+              <button onclick="result_block_bh_copy()" class="copy">
+                <img src="/src/assets/icons/copy.svg" />copy
+              </button>
+              <p>________________</p>
+            </div>
+            <div id="r_b">
+              <h4>
+                Resource
+                <p>blocks.json</p>
+              </h4>
+              <textarea cols="35" rows="7" readonly id="result_block_b_rs">
+              </textarea>
+              <button onclick="result_block_b_rs_copy()" class="copy">
+                <img src="/src/assets/icons/copy.svg" />copy
+              </button>
+              <h4>
+                <p>terrain_texture.json</p>
+              </h4>
+              <textarea cols="35" rows="11" readonly id="result_block_t_rs">
+              </textarea>
+              <button onclick="result_block_t_rs_copy()" class="copy">
+                <img src="/src/assets/icons/copy.svg" />copy
+              </button>
+              <p>________________</p>
+            </div>
+          </div>
+          <button onclick="block_download()">
+            <img src="/src/assets/icons/file-archive.svg" />
+            Descargar.zip
+          </button>
+          <p>________________</p>
+        </div>
+      </div>
+    </div>
+    <!-- js -->
+    <script
+      src="/src/lib/jszip.min.js"
+      type="text/javascript"
+      charset="utf-8"></script>
+    <script
+      src="/src/lib/FileSaver.js"
+      type="text/javascript"
+      charset="utf-8"></script>
+    <script
+      src="/src/lib/uuid.js"
+      type="text/javascript"
+      charset="utf-8"></script>
+    <script src="/src/js/index.js"></script>
+    <script src="block.js"></script>
+    <!--------------------------------------------->
+  </body>
+</html>

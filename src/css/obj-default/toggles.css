@@ -1,0 +1,167 @@
+[type="checkbox"] {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  display: block;
+  width: 64px;
+  height: 20px;
+  left: 300px;
+  top: -72px;
+}
+
+.toggle::after {
+  position: relative;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 15px;
+  border-radius: 1px;
+  top: -2px;
+  left: 30px;
+  border: 2px solid #562b87;
+  cursor: pointer;
+  animation-name: menu-anim;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.toggle::before {
+  position: relative;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 30px;
+  border-radius: 1px;
+  top: 25px;
+  left: 8px;
+  border: 2px solid #562b87;
+  cursor: pointer;
+  animation-name: menu-anim;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* autor */
+
+#autor_checkbox:checked ~ #autor_toggle::before {
+  left: 63px;
+}
+
+/* creative */
+
+#creative_checkbox:checked ~ #creative_toggle::before {
+  left: 63px;
+}
+
+/* inmovable */
+
+#inmovable_checkbox:checked ~ #inmovable_toggle::before {
+  left: 63px;
+}
+
+/* breakonpush */
+
+#breakonpush_checkbox:checked ~ #breakonpush_toggle::before {
+  left: 63px;
+}
+
+/* onlypistonpush*/
+
+#onlypistonpush_checkbox:checked ~ #onlypistonpush_toggle::before {
+  left: 63px;
+}
+
+/* geometry */
+
+#geometry_checkbox:checked ~ #geometry_toggle::before {
+  left: 63px;
+}
+/* crafting_table */
+
+#crafting_table_checkbox:checked ~ #crafting_table_toggle::before {
+  left: 63px;
+}
+/* entity_collision */
+
+#entity_collision_checkbox:checked ~ #entity_collision_toggle::before {
+  left: 63px;
+}
+
+/* entity_collision_none */
+
+#entity_collision_none_checkbox:checked
+  ~ #entity_collision_none_toggle::before {
+  left: 63px;
+}
+
+/* pick_collision */
+
+#pick_collision_checkbox:checked ~ #pick_collision_toggle::before {
+  left: 63px;
+}
+
+/* pick_collision_none */
+
+#pick_collision_none_checkbox:checked ~ #pick_collision_none_toggle::before {
+  left: 63px;
+}
+
+/* result-toggle  */
+
+.result-toggle {
+  position: relative;
+  display: block;
+  width: 64px;
+  height: 40px;
+  left: 300px;
+  top: -60px;
+  cursor: pointer;
+}
+
+.result-toggle::after {
+  position: relative;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  border-radius: 1px;
+  top: 20px;
+  left: 10px;
+  border: 2px solid #562b87;
+  cursor: pointer;
+  transform: rotate(320deg);
+  animation-name: menu-anim;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.result-toggle::before {
+  position: relative;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  border-radius: 1px;
+  top: 25px;
+  left: 30px;
+  border: 2px solid #562b87;
+  cursor: pointer;
+  transform: rotate(-320deg);
+  animation-name: menu-anim;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#result_manifest_checkbox:checked ~ #result_manifest_toggle::after {
+  transform: rotate(-320deg);
+}
+
+#result_manifest_checkbox:checked ~ #result_manifest_toggle::before {
+  transform: rotate(320deg);
+}
