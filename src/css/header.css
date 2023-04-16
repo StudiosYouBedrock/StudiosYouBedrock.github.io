@@ -3,10 +3,17 @@
 /* header */
 
 /* --------------------------------------------- */
-
+.background {
+  position: fixed;
+  width: 3000px;
+  height: 3000px;
+  top: -5000px;
+  left: 0;
+  background-color: #0d101776;
+  transition: 3000ms;
+}
 #header {
   position: fixed;
-
   top: 0;
   left: 0;
   text-align: center;
@@ -14,30 +21,23 @@
 }
 
 #menu-checkbox:checked ~ #menu {
-  display: block;
+  top: 0;
   animation: mymove_menu 2s;
 }
 
-/* #menu:hover {
-  display: block;
-  animation: mymove_menu 1s;
-}
-#menu-bt:hover ~ #menu {
-  display: block;
-  animation: mymove_menu 1s;
-} */
 #menu {
   position: absolute;
   width: 400px;
   height: 400px;
-  top: 0;
+  top: -500px;
   left: 0;
   z-index: 3;
-  background-color: #00081aed;
+  background-color: #00081a79;
   border: 2px solid #362b87;
   border-radius: 4px;
-  display: none;
+
   overflow-y: auto;
+  transition: 2000ms;
 }
 
 #menu > p {
@@ -78,8 +78,11 @@
   left: 4px;
   cursor: pointer;
   z-index: 4;
+  transition: 400ms;
 }
-
+#menu-checkbox:checked ~ .background {
+  top: 0;
+}
 .menu-bt_top {
   position: relative;
   display: block;
